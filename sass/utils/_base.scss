@@ -1,0 +1,22 @@
+body {
+    font-family: $font-family-main;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+
+    color: $color-text-main;
+    background-color: $color-background-main;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}

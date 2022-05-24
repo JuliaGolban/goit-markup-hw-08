@@ -1,0 +1,33 @@
+// header contacts
+.contacts {
+    @extend %list;
+    margin-left: auto;
+}
+
+.contacts__link {
+    @extend %link;
+    display: flex;
+    align-items: center;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color $transition-duration $transition-timing-function;
+}
+
+.contacts__item {
+    color: $color-text-second;
+
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.contacts__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}

@@ -1,0 +1,32 @@
+%visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    margin: -1px;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+}
+
+%list {
+    list-style: none;
+
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+%link {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+        color: $color-accent;
+    }
+}

@@ -1,0 +1,38 @@
+// section clients
+.clients__list {
+    @extend %list;
+}
+
+.clients__item {
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.clients__link {
+    @extend %link;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 92px;
+
+    color: $color-icon;
+    border: 1px solid $color-icon;
+    border-radius: 4px;
+
+    transition: color $transition-duration $transition-timing-function, border $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $color-accent;
+        color: $color-accent;
+    }
+}
+
+.clients__icon {
+    fill: currentColor;
+}

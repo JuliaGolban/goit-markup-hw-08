@@ -1,0 +1,45 @@
+// features section
+.features {
+    padding-bottom: 0;
+}
+
+.features__list {
+    @extend %list;
+}
+
+.features__item {
+    width: 270px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.features__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    width: 270px;
+    height: 120px;
+
+    background: $color-background-second;
+    border-radius: 4px;
+}
+
+.features__title {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.features__description {
+    line-height: 1.71;
+
+    color: $color-text-second;
+}

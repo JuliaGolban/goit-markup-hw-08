@@ -1,0 +1,27 @@
+.logo {
+    font-family: $font-family-logo;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    color: inherit;
+
+    &--header-accent {
+        padding-top: 24px;
+        padding-bottom: 25px;
+        margin-right: 93px;
+
+        color: $color-text-black;
+    }
+
+    &--footer-accent {
+        display: block;
+        margin-bottom: 20px;
+
+        color: $color-text-white;
+    }
+}
+
+.logo__label {
+    color: $color-accent;
+}
