@@ -1,5 +1,12 @@
-.site-nav {
+.site-nav__list {
     @extend %list;
+    display: none;
+
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .site-nav__item {

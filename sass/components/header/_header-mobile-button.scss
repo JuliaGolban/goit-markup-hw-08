@@ -1,0 +1,50 @@
+.mobile-button {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    width: 40px;
+    height: 40px;
+
+    color: $color-text-black;
+    background: $color-background-main;
+    border: none;
+
+    cursor: pointer;
+    transition: color $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $color-accent;
+    }
+
+    @media screen and (min-width:$tablet) {
+        display: none;
+    }
+}
+
+.mobile-button__icon {
+    fill: currentColor;
+}
+
+.mobile-button__icon-open {
+    display: block;
+
+    .mobile-button.is-open & {
+        display: none;
+    }
+}
+
+.mobile-button__icon-close {
+    display: none;
+
+    .mobile-button.is-open & {
+        display: block;
+        overflow-y: scroll;
+    }
+}

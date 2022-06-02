@@ -1,29 +1,54 @@
 // header contacts
 .contacts {
     @extend %list;
+    display: none;
     margin-left: auto;
-}
 
-.contacts__link {
-    @extend %link;
-    display: flex;
-    align-items: center;
+    @media screen and (min-width:$tablet) {
+        display: block;
+    }
 
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    transition: color $transition-duration $transition-timing-function;
+    @media screen and (min-width:$desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: auto;
+    }
 }
 
 .contacts__item {
     color: $color-text-second;
 
     &:not(:last-child) {
-        margin-right: 50px;
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width:$desktop) {
+        &:not(:last-child) {
+            margin-right: 50px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.contacts__link {
+    @extend %link;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    transition: color $transition-duration $transition-timing-function;
+
+    @media screen and (min-width:$desktop) {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        font-size: 14px;
+        line-height: 1.14;
     }
 }
 

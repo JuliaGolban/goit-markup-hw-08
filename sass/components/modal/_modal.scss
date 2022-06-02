@@ -5,10 +5,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
+
     padding: 40px;
 
-    width: 528px;
-    height: 581px;
+    width: 450px;
+    // width: calc(100vw - 30px);
+    max-height: calc(100vh - 30px);
+    min-height: 581px;
 
     background: $color-background-main;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -21,6 +24,17 @@
     .backdrop.is-hidden>& {
         transform: translate(-50%, -50%) scale(1.5);
     }
+
+    @media screen and (min-width: $tablet) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 528px;
+    }
 }
 
 .modal__title {
@@ -32,6 +46,7 @@
     text-align: center;
 }
 
+// modal-button
 .modal__close-button {
     position: absolute;
     top: 8px;

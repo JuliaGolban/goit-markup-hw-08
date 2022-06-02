@@ -1,9 +1,17 @@
 .footer__subscribe {
-    margin-right: auto;
+    @media screen and (min-width: $desktop) {
+        margin-right: auto;
+    }
 }
 
 .subscribe__form {
-    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .subscribe__title {
@@ -17,12 +25,12 @@
 }
 
 .subscribe__input {
-    margin-right: 12px;
+    margin-bottom: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 16px;
 
-    width: 358px;
+    width: 100%;
     height: 50px;
 
     display: flex;
@@ -41,12 +49,21 @@
 
     transition: border-color transition-duration $transition-timing-function;
 
-
     &:hover,
     &:focus,
     &:active {
         outline: 0;
         border-color: $color-background-main;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 0;
+        margin-right: 12px;
+        width: 358px;
     }
 }
 
@@ -58,7 +75,8 @@
     text-align: center;
 
     padding: 10px 28px;
-
+    margin-left: auto;
+    margin-right: auto;
 
     &::after {
         content: "";

@@ -1,7 +1,17 @@
 // footer contacts
 
 .footer__contacts {
-    margin-right: 70px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 165px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 0;
+        margin-right: 70px;
+    }
+
 }
 
 .address {

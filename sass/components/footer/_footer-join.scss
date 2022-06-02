@@ -1,5 +1,14 @@
 .footer__join {
-    margin-right: 93px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 93px;
+    }
 }
 
 .join__title {

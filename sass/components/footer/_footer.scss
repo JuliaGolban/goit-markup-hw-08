@@ -8,6 +8,17 @@
 }
 
 .footer__container {
-    display: flex;
-    align-items: baseline;
+    display: block;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
 }

@@ -1,0 +1,119 @@
+.header__mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 48px 40px;
+    background-color: $color-text-white;
+
+    visibility: hidden;
+    overflow-y: scroll;
+
+    &.is-open {
+        visibility: visible;
+    }
+
+    @media screen and (min-width:$tablet) {
+        display: none;
+    }
+}
+
+//mobile navigation
+.mobile-menu__navigation {
+    margin-bottom: 302px;
+}
+
+.mobile-menu__navigation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu__navigation-item {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.mobile-menu__navigation-link {
+    @extend %link;
+
+    display: flex;
+
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    transition: color $transition-duration $transition-timing-function;
+}
+
+.mobile-menu__navigation-link--active {
+    position: relative;
+    color: $color-accent;
+}
+
+//mobile contacts
+.mobile-menu__contacts {
+    @extend %list;
+    margin-bottom: 64px;
+}
+
+.mobile-menu__contacts-item {
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.mobile-menu__contacts-tel {
+    @extend %link;
+    font-weight: 500;
+    font-size: 34px;
+
+    color: $color-accent;
+}
+
+.mobile-menu__contacts-mail {
+    @extend %link;
+    font-weight: 500;
+    font-size: 24px;
+
+    color: $color-text-second;
+}
+
+//mobile socials
+.mobile-menu__socials {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mobile-menu__socials-item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $color-accent;
+
+    &:not(:first-child) {
+        padding-left: 10px;
+    }
+
+    &:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+}
+
+.mobile-menu__socials-link {
+    @extend %link;
+}

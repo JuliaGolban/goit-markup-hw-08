@@ -1,12 +1,24 @@
 // section clients
 .clients__list {
     @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px;
 }
 
 .clients__item {
+    margin: 15px;
 
-    &:not(:last-child) {
-        margin-right: 30px;
+    width: calc((100% - 30px*2)/2);
+    height: 92px;
+
+    @media screen and (min-width: $tablet) {
+        max-width: calc((100% - 30px*3)/3);
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: 170px;
     }
 }
 
@@ -17,8 +29,8 @@
     justify-content: center;
     align-items: center;
 
-    width: 170px;
-    height: 92px;
+    width: 100%;
+    height: 100%;
 
     color: $color-icon;
     border: 1px solid $color-icon;

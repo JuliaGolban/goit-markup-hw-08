@@ -1,6 +1,20 @@
 // work section
+.work {
+    display: none;
+
+    @media screen and (min-width:$desktop) {
+        display: block;
+    }
+}
+
 .work__list {
     @extend %list;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .work__item {

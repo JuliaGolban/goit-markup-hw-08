@@ -27,9 +27,9 @@
 				Studio
 			</a>
 			<!-- ==== menu navigation ==== -->
-			<nav>
+			<nav class="site-nav">
 				<!-- ====links to other pages ==== -->
-				<ul class="site-nav">
+				<ul class="site-nav__list">
 					<li class="site-nav__item">
 						<a href="./index.html" class="site-nav__link site-nav__link--active">Студия</a>
 					</li>
@@ -41,7 +41,7 @@
 					</li>
 				</ul>
 			</nav>
-			<!-- ==== e-mail and tel ==== -->
+			<!-- ==== contacts ==== -->
 			<ul class="contacts">
 				<li class="contacts__item">
 					<a href="mailto:info@devstudio.com" class="contacts__link">
@@ -61,6 +61,69 @@
 				</li>
 			</ul>
 		</div>
+		<!-- ==== mobile-menu ==== -->
+		<div class="header__mobile-menu mobile-menu" id="mobile-menu" data-menu>
+			<nav class="mobile-menu__navigation">
+				<ul class="mobile-menu__navigation-list">
+					<li class="mobile-menu__navigation-item">
+						<a href="./index.html"
+							class="mobile-menu__navigation-link mobile-menu__navigation-link--active">Студия</a>
+					</li>
+					<li class="mobile-menu__navigation-item">
+						<a href="./portfolio.html" class="mobile-menu__navigation-link">Портфолио</a>
+					</li>
+					<li class="mobile-menu__navigation-item">
+						<a href="" class="mobile-menu__navigation-link">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<ul class="mobile-menu__contacts">
+				<li class="mobile-menu__contacts-item">
+					<a href="tel:+380961111111" class="mobile-menu__contacts-tel">
+
+						+38 096 111 11 11
+					</a>
+				</li>
+				<li class="mobile-menu__contacts-item">
+					<a href="mailto:info@devstudio.com" class="mobile-menu__contacts-mail">
+						info@devstudio.com
+					</a>
+				</li>
+			</ul>
+			<ul class="mobile-menu__socials">
+				<li class="mobile-menu__socials-item">
+					<a class="mobile-menu__socials-link" href="https://www.instagram.com/" target="_blank"
+						rel="noopener noreferrer" lang="en" aria-label="Instagram">
+						Instagram
+					</a>
+				</li>
+				<li class="mobile-menu__socials-item">
+					<a class="mobile-menu__socials-link" href="https://twitter.com/" target="_blank"
+						rel="noopener noreferrer" lang="en" aria-label="Twitter">
+						Twitter
+					</a>
+				</li>
+				<li class="mobile-menu__socials-item">
+					<a class="mobile-menu__socials-link" href="https://www.facebook.com/" target="_blank"
+						rel="noopener noreferrer" lang="en" aria-label="Facebook">
+						Facebook
+					</a>
+				</li>
+				<li class="mobile-menu__socials-item">
+					<a class="mobile-menu__socials-link" href="https://www.linkedin.com/" target="_blank"
+						rel="noopener noreferrer" lang="en" aria-label="Linkedin">
+						Linkedin
+					</a>
+				</li>
+			</ul>
+		</div>
+		<button class="mobile-button" type="button" aria-label="Переключатель мобильного меню" aria-expanded="false"
+			aria-controls="mobile-menu" data-menu-button>
+			<svg class="mobile-button__icon" width="40" height="40">
+				<use class="mobile-button__icon-open" href="./images/icons.svg#icon-menu_40px"></use>
+				<use class="mobile-button__icon-close" href="./images/icons.svg#icon-close_40px"></use>
+			</svg>
+		</button>
 	</header>
 
 	<!-- ======== page content ======== -->
@@ -130,21 +193,21 @@
 				<h2 class="section__title">Чем мы занимаемся</h2>
 				<ul class="work__list">
 					<li class="work__item">
-						<img class="image" src="./images/box1_sq.jpg" alt="Разработка декстопных приложений" width="370"
-							height="294" />
+						<img class="image" src="./images/works/box_1.jpg" alt="Разработка декстопных приложений"
+							width="370" height="294" />
 						<div class="work__label">
 							<p class="work__description">Десктопные приложения</p>
 						</div>
 					</li>
 					<li class="work__item">
-						<img class="image" src="./images/box2_sq.jpg" alt="Разработка мобильных приложений" width="370"
-							height="294" />
+						<img class="image" src="./images/works/box_2.jpg" alt="Разработка мобильных приложений"
+							width="370" height="294" />
 						<div class="work__label">
 							<p class="work__description">Мобильные приложения</p>
 						</div>
 					</li>
 					<li class="work__item">
-						<img class="image" src="./images/box3_sq.jpg" alt="Разработка дизайнерских приложений"
+						<img class="image" src="./images/works/box_3.jpg" alt="Разработка дизайнерских приложений"
 							width="370" height="294" />
 						<div class="work__label">
 							<p class="work__description">Дизайнерские решения</p>
@@ -159,7 +222,7 @@
 				<h2 class="section__title">Наша команда</h2>
 				<ul class="team__list">
 					<li class="team__item">
-						<img src="./images/card1_sq.jpg" alt="фото Игоря Демьяненко" width="270" height="260" />
+						<img class="team__image image" src="./images/team/card_1.jpg" alt="фото Игоря Демьяненко" />
 						<div class="team__wrap">
 							<h3 class="team__title">Игорь Демьяненко</h3>
 							<p class="team__description" lang="en">Product Designer</p>
@@ -200,7 +263,7 @@
 						</div>
 					</li>
 					<li class="team__item">
-						<img src="./images/card2_sq.jpg" alt="фото Ольги Репиной" width="270" height="260" />
+						<img class="team__image image" src="./images/team/card_2.jpg" alt="фото Ольги Репиной" />
 						<div class="team__wrap">
 							<h3 class="team__title">Ольга Репина</h3>
 							<p class="team__description" lang="en">Frontend Developer</p>
@@ -241,7 +304,7 @@
 						</div>
 					</li>
 					<li class="team__item">
-						<img src="./images/card3_sq.jpg" alt="фото Николая Тарасова" width="270" height="260" />
+						<img class="team__image image" src="./images/team/card_3.jpg" alt="фото Николая Тарасова" />
 						<div class="team__wrap">
 							<h3 class="team__title">Николай Тарасов</h3>
 							<p class="team__description" lang="en">Marketing</p>
@@ -282,7 +345,7 @@
 						</div>
 					</li>
 					<li class="team__item">
-						<img src="./images/card4_sq.jpg" alt="фото Михаила Ермакова" width="270" />
+						<img class="team__image image" src="./images/team/card_4.jpg" alt="фото Михаила Ермакова" />
 						<div class="team__wrap">
 							<h3 class="team__title">Михаил Ермаков</h3>
 							<p class="team__description" lang="en">UI Designer</p>
@@ -326,7 +389,7 @@
 			</div>
 		</section>
 		<!-- ==== section regular clients ==== -->
-		<section class="clients__section section">
+		<section class="clients section">
 			<div class="container">
 				<h2 class="section__title">Постоянные клиенты</h2>
 				<ul class="clients__list">
@@ -406,7 +469,7 @@
 			</div>
 			<!-- ==== social links ==== -->
 			<div class="footer__join join">
-				<h3 class="join__title">присоединяйтесь</h3>
+				<p class="join__title">присоединяйтесь</p>
 				<ul class="social-links list">
 					<li class="social-links__item social-links__item--bgc">
 						<a class="social-links__link" href="https://www.instagram.com/" target="_blank"
@@ -444,7 +507,7 @@
 			</div>
 			<!-- ==== form subscribe ==== -->
 			<div class="footer__subscribe subscribe">
-				<h3 class="subscribe__title">Подпишитесь на рассылку</h3>
+				<p class="subscribe__title">Подпишитесь на рассылку</p>
 				<form class="subscribe__form">
 					<label aria-label="Почта">
 						<input type="email" name="email" placeholder="E-mail" class="subscribe__input" /></label>
@@ -500,7 +563,7 @@
 						<svg class="form__icon form__icon--checked" width="16" height="15">
 							<use href="./images/icons.svg#icon-check2"></use>
 						</svg>
-						<span class="form__icon--unchecked"></span>
+						<span class="form__icon form__icon--unchecked"></span>
 					</span>
 					<span class="form__label form__label-checkbox">
 						Соглашаюсь с рассылкой и принимаю
@@ -512,6 +575,7 @@
 		</div>
 	</div>
 	<script src="./js/modal.js"></script>
+	<script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 .container {
-    width: 1200px;
+    width: 100%;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
@@ -8,4 +8,8 @@
     padding-bottom: 0;
     padding-left: 15px;
     padding-right: 15px;
+
+    @media screen and (min-width:$desktop) {
+        max-width: $desktop;
+    }
 }
