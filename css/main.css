@@ -379,6 +379,7 @@ p {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -486,9 +487,10 @@ p {
 }
 
 .mobile-button {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 15px;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,6 +513,11 @@ p {
 
 .mobile-button:hover, .mobile-button:focus {
   color: #2196f3;
+}
+
+.mobile-button.is-open {
+  position: fixed;
+  overflow-y: scroll;
 }
 
 @media screen and (min-width: 768px) {
@@ -536,8 +543,8 @@ p {
 }
 
 .mobile-button.is-open .mobile-button__icon-close {
+  position: fixed;
   display: block;
-  overflow-y: scroll;
 }
 
 .hero {
