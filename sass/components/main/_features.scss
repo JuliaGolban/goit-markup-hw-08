@@ -28,6 +28,10 @@
         &:nth-child(2n+1) {
             margin-right: 30px;
         }
+
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
+        }
     }
 
     @media screen and (min-width:$desktop) {
@@ -35,6 +39,7 @@
 
         &:not(:last-child) {
             margin-right: 30px;
+            margin-bottom: 0;
         }
     }
 }

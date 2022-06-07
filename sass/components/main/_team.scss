@@ -31,16 +31,16 @@
         }
 
         &:nth-last-child(-n+2) {
-            margin-bottom: 30px;
+            margin-bottom: 0;
         }
     }
 
     @media screen and (min-width: $desktop) {
         max-width: 270px;
-        margin-bottom: 0;
 
         &:not(:last-child) {
             margin-right: 30px;
+            margin-bottom: 0;
         }
     }
 }
