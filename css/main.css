@@ -793,14 +793,15 @@ p {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
 .team__item {
   width: 100%;
+  height: auto;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -811,12 +812,15 @@ p {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 480px) {
+  .team__item {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team__item {
     max-width: calc((100% - 30px)/2);
-  }
-  .team__item:nth-child(odd) {
-    margin-right: 30px;
   }
   .team__item:nth-last-child(-n+2) {
     margin-bottom: 0;
@@ -828,24 +832,32 @@ p {
     max-width: 270px;
   }
   .team__item:not(:last-child) {
-    margin-right: 30px;
     margin-bottom: 0;
   }
 }
 
 .team__image {
   width: 100%;
-  height: 460px;
+  height: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .team__image {
+    width: 450px;
+    height: 460px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .team__image {
+    width: 354px;
     height: 374px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .team__image {
+    width: 270px;
     height: 260px;
   }
 }
@@ -1002,9 +1014,9 @@ p {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin-top: 30px;
   }
 }
@@ -1017,10 +1029,17 @@ p {
 
 .projects__item {
   width: 100%;
+  height: auto;
 }
 
 .projects__item:not(:last-child) {
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .projects__item {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1047,7 +1066,7 @@ p {
 
 .projects__image {
   width: 100%;
-  height: 294px;
+  height: 100%;
 }
 
 .projects__link {
