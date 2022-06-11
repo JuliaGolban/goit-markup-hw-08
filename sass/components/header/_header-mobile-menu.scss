@@ -6,11 +6,14 @@
 
     width: 100%;
     height: 100%;
+    padding: 48px 40px;
 
     display: flex;
     flex-direction: column;
 
-    padding: 48px 40px;
+    transform: translateX(-100%);
+    transition: transform $transition-duration $transition-timing-function, visibility $transition-duration $transition-timing-function;
+
     background-color: $color-text-white;
 
     visibility: hidden;
@@ -18,6 +21,7 @@
 
     &.is-open {
         visibility: visible;
+        transform: translateX(0);
     }
 
     @media screen and (min-width:$tablet) {
@@ -48,11 +52,15 @@
     display: flex;
 
     font-weight: 500;
-    font-size: 40px;
+    @include font-size(40);
     line-height: 1.17;
     letter-spacing: 0.02em;
 
     transition: color $transition-duration $transition-timing-function;
+
+    @media screen and (min-width:$mobile) {
+        font-size: 40px;
+    }
 }
 
 .mobile-menu__navigation-link--active {
@@ -78,17 +86,25 @@
 .mobile-menu__contacts-tel {
     @extend %link;
     font-weight: 500;
-    font-size: 34px;
+    @include font-size(34);
 
     color: $color-accent;
+
+    @media screen and (min-width:$mobile) {
+        font-size: 34px;
+    }
 }
 
 .mobile-menu__contacts-mail {
     @extend %link;
     font-weight: 500;
-    font-size: 24px;
+    @include font-size(24);
 
     color: $color-text-second;
+
+    @media screen and (min-width:$mobile) {
+        font-size: 24px;
+    }
 }
 
 //mobile socials
@@ -101,7 +117,7 @@
 
 .mobile-menu__socials-item {
     font-weight: 500;
-    font-size: 18px;
+    @include font-size(18);
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: $color-accent;
@@ -113,6 +129,10 @@
     &:not(:last-child) {
         padding-right: 10px;
         border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    @media screen and (min-width:$mobile) {
+        font-size: 18px;
     }
 }
 

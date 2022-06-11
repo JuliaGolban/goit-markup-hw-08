@@ -49,6 +49,12 @@ p {
   padding-bottom: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -122,12 +128,6 @@ p {
 .button:hover, .button:focus {
   background-color: #188ce8;
   border-color: #188ce8;
-}
-
-.image {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 .container {
@@ -387,6 +387,7 @@ p {
   z-index: 10;
   width: 100%;
   height: 100%;
+  padding: 48px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,7 +395,12 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 48px 40px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #ffffff;
   visibility: hidden;
   overflow-y: scroll;
@@ -402,6 +408,8 @@ p {
 
 .header__mobile-menu.is-open {
   visibility: visible;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @media screen and (min-width: 768px) {
@@ -429,11 +437,17 @@ p {
   display: -ms-flexbox;
   display: flex;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 8.33333vw;
   line-height: 1.17;
   letter-spacing: 0.02em;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .mobile-menu__navigation-link {
+    font-size: 40px;
+  }
 }
 
 .mobile-menu__navigation-link--active {
@@ -456,14 +470,26 @@ p {
 
 .mobile-menu__contacts-tel {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 7.08333vw;
   color: #2196f3;
+}
+
+@media screen and (min-width: 480px) {
+  .mobile-menu__contacts-tel {
+    font-size: 34px;
+  }
 }
 
 .mobile-menu__contacts-mail {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 5vw;
   color: #757575;
+}
+
+@media screen and (min-width: 480px) {
+  .mobile-menu__contacts-mail {
+    font-size: 24px;
+  }
 }
 
 .mobile-menu__socials {
@@ -479,7 +505,7 @@ p {
 
 .mobile-menu__socials-item {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 3.75vw;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
@@ -492,6 +518,12 @@ p {
 .mobile-menu__socials-item:not(:last-child) {
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+@media screen and (min-width: 480px) {
+  .mobile-menu__socials-item {
+    font-size: 18px;
+  }
 }
 
 .mobile-button {
