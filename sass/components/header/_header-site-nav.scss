@@ -2,7 +2,7 @@
     @extend %list;
     display: none;
 
-    @media screen and (min-width:$tablet) {
+    @include mq(tablet) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

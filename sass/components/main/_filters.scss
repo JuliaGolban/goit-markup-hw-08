@@ -5,7 +5,7 @@
     justify-content: left;
     margin-bottom: -15px;
 
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
         justify-content: center;
         margin-bottom: 0;
     }
@@ -18,7 +18,7 @@
         margin-right: 8px;
     }
 
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
         margin-bottom: 0;
     }
 }

@@ -4,11 +4,11 @@
     display: none;
     margin-left: auto;
 
-    @media screen and (min-width:$tablet) {
+    @include mq(tablet) {
         display: block;
     }
 
-    @media screen and (min-width:$desktop) {
+    @include mq(desktop) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -23,7 +23,7 @@
         margin-bottom: 10px;
     }
 
-    @media screen and (min-width:$desktop) {
+    @include mq(desktop) {
         &:not(:last-child) {
             margin-right: 50px;
             margin-bottom: 0;
@@ -41,7 +41,7 @@
 
     transition: color $transition-duration $transition-timing-function;
 
-    @media screen and (min-width:$desktop) {
+    @include mq(desktop) {
         display: flex;
         align-items: center;
         padding-top: 32px;

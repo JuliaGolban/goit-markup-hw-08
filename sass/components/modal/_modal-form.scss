@@ -102,11 +102,11 @@
         color: rgba(117, 117, 117, 0.5);
     }
 
-    @media screen and (min-width:$mobile) {
+    @include mq(mobile) {
         width: 370px;
     }
 
-    @media screen and (min-width:$desktop) {
+    @include mq(desktop) {
         width: 448px;
     }
 }
@@ -182,7 +182,7 @@
     cursor: pointer;
     user-select: none;
 
-    @media screen and (min-width:$desktop) {
+    @include mq(desktop) {
         font-size: 14px;
         line-height: 1.71;
     }

@@ -7,7 +7,7 @@
 
     border-bottom: 1px solid #ececec;
 
-    @media screen and (min-width:$tablet) {
+    @include mq(tablet) {
         height: auto;
     }
 }

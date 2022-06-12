@@ -11,14 +11,14 @@
     display: block;
     text-align: center;
 
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: baseline;
     }
 
-    @media screen and (min-width: $desktop) {
+    @include mq(desktop) {
         text-align: left;
     }
 }

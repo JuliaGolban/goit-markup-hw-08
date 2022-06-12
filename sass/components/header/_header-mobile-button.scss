@@ -29,7 +29,7 @@
         overflow-y: scroll;
     }
 
-    @media screen and (min-width:$tablet) {
+    @include mq(tablet) {
         display: none;
     }
 }

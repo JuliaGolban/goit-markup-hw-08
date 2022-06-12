@@ -24,18 +24,18 @@
         transform: translate(-50%, -50%) scale(1.5);
     }
 
-    @media screen and (min-width:$mobile) {
+    @include mq(mobile) {
         width: 450px;
     }
 
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(1);
     }
 
-    @media screen and (min-width: $desktop) {
+    @include mq(desktop) {
         width: 528px;
         min-height: 581px;
     }

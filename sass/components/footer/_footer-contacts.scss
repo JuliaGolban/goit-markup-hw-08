@@ -3,7 +3,7 @@
 .footer__contacts {
     margin-bottom: 60px;
 
-    @media screen and (min-width: $desktop) {
+    @include mq(desktop) {
         margin-bottom: 0;
         margin-right: 70px;
     }

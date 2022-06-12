@@ -2,14 +2,14 @@
     @extend %list;
     margin-top: 40px;
 
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
         margin-top: 30px;
     }
 
-    @media screen and (min-width: $desktop) {
+    @include mq(desktop) {
         margin-top: 50px;
     }
 }
@@ -22,11 +22,11 @@
         margin-bottom: 30px;
     }
 
-    @media screen and (min-width: $mobile) {
+    @include mq(mobile) {
         width: 450px;
     }
 
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
         max-width: calc((100% - 30px)/2);
 
         &:nth-child(odd) {
@@ -34,7 +34,7 @@
         }
     }
 
-    @media screen and (min-width: $desktop) {
+    @include mq(desktop) {
         max-width: 370px;
         margin-right: 30px;
 

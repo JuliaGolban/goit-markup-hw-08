@@ -1,12 +1,12 @@
 .footer__join {
     margin-bottom: 60px;
 
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
         margin-bottom: 0;
         margin-right: 0;
     }
 
-    @media screen and (min-width: $desktop) {
+    @include mq(desktop) {
         margin-right: 93px;
     }
 }

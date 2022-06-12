@@ -24,7 +24,7 @@
         transform: translateX(0);
     }
 
-    @media screen and (min-width:$tablet) {
+    @include mq(tablet) {
         display: none;
     }
 }
@@ -58,7 +58,7 @@
 
     transition: color $transition-duration $transition-timing-function;
 
-    @media screen and (min-width:$mobile) {
+    @include mq(mobile) {
         font-size: 40px;
     }
 }
@@ -90,7 +90,7 @@
 
     color: $color-accent;
 
-    @media screen and (min-width:$mobile) {
+    @include mq(mobile) {
         font-size: 34px;
     }
 }
@@ -102,7 +102,7 @@
 
     color: $color-text-second;
 
-    @media screen and (min-width:$mobile) {
+    @include mq(mobile) {
         font-size: 24px;
     }
 }
@@ -131,7 +131,7 @@
         border-right: 1px solid rgba(33, 33, 33, 0.2);
     }
 
-    @media screen and (min-width:$mobile) {
+    @include mq(mobile) {
         font-size: 18px;
     }
 }

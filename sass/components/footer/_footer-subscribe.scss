@@ -1,7 +1,7 @@
 .subscribe__form {
     justify-content: center;
 
-    @media screen and (min-width: $desktop) {
+    @include mq(desktop) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -41,7 +41,7 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
 
-    transition: border-color transition-duration $transition-timing-function;
+    transition: border-color $transition-duration $transition-timing-function;
 
     &:hover,
     &:focus,
@@ -50,11 +50,11 @@
         border-color: $color-background-main;
     }
 
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
         width: 450px;
     }
 
-    @media screen and (min-width: $desktop) {
+    @include mq(desktop) {
         margin-bottom: 0;
         margin-right: 12px;
         width: 358px;

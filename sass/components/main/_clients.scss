@@ -13,11 +13,11 @@
     width: calc((100% - 30px*2)/2);
     height: 92px;
 
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
         max-width: calc((100% - 30px*3)/3);
     }
 
-    @media screen and (min-width: $desktop) {
+    @include mq(desktop) {
         max-width: 170px;
     }
 }

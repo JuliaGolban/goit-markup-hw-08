@@ -1,6 +1,6 @@
 // features section
 .features {
-    @media screen and (min-width:$desktop) {
+    @include mq(desktop) {
         padding-bottom: 0;
     }
 }
@@ -8,7 +8,7 @@
 .features__list {
     @extend %list;
 
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -22,7 +22,7 @@
         margin-bottom: 30px;
     }
 
-    @media screen and (min-width:$tablet) {
+    @include mq(tablet) {
         max-width: calc((100% - 60px)/2);
 
         &:nth-child(2n+1) {
@@ -34,7 +34,7 @@
         }
     }
 
-    @media screen and (min-width:$desktop) {
+    @include mq(desktop) {
         max-width: 270px;
 
         &:not(:last-child) {
@@ -67,7 +67,7 @@
     text-transform: uppercase;
     text-align: center;
 
-    @media screen and (min-width:$tablet) {
+    @include mq(tablet) {
         text-align: left;
     }
 }

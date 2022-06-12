@@ -3,15 +3,15 @@
     padding: 0 15px;
     width: 100%;
 
-    @media screen and (min-width:$mobile) {
+    @include mq(mobile) {
         width: $mobile;
     }
 
-    @media screen and (min-width:$tablet) {
+    @include mq(tablet) {
         width: $tablet;
     }
 
-    @media screen and (min-width:$desktop) {
+    @include mq(desktop) {
         width: $desktop;
     }
 }

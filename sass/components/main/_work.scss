@@ -2,7 +2,7 @@
 .work {
     display: none;
 
-    @media screen and (min-width:$desktop) {
+    @include mq(desktop) {
         display: block;
     }
 }
@@ -10,7 +10,7 @@
 .work__list {
     @extend %list;
 
-    @media screen and (min-width: $tablet) {
+    @include mq(tablet) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

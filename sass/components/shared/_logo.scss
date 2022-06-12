@@ -6,7 +6,7 @@
     text-decoration: none;
     color: inherit;
 
-    @media screen and (min-width:$desktop) {
+    @include mq(desktop) {
         font-size: 26px;
         line-height: 1.2;
     }
@@ -16,13 +16,13 @@
         padding-top: 16px;
         padding-bottom: 16px;
 
-        @media screen and (min-width:$tablet) {
+        @include mq(tablet) {
             padding-top: 26px;
             padding-bottom: 26px;
             margin-right: 88px;
         }
 
-        @media screen and (min-width:$desktop) {
+        @include mq(desktop) {
             padding-top: 24px;
             padding-bottom: 25px;
             margin-right: 93px;
